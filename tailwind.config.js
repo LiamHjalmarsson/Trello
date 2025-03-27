@@ -8,8 +8,29 @@ export default {
 
     theme: {
         extend: {
-
+            colors: {
+                primary: {
+                    DEFAULT: "#763aff",
+                    hover: "",
+                    active: "",
+                    focus: "",
+                    disabled: ""
+                },
+                secondary: {
+                },
+                success: {
+                },
+                danger: {
+                },
+                warning: {
+                },
+                neutral: {
+                },
+                accent: {
+                },
+                text: {
+                },
+            },
         },
     },
-
 };
