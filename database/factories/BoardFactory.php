@@ -17,9 +17,11 @@ class BoardFactory extends Factory
      */
     public function definition(): array
     {
+        $user_id = User::inRandomOrder()->first() ?: NULL;
+
         return [
             'title' => fake()->title(),
-            'user_id' => User::factory()
+            'user_id' => $user_id
         ];
     }
 }

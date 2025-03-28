@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Board;
 use App\Models\TaskList;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -19,10 +18,13 @@ class TaskFactory extends Factory
      */
     public function definition(): array
     {
+        $user_id = User::inRandomOrder()->first() ?: NULL;
+        $list_id = TaskList::inRandomOrder()->first() ?: NULL;
+
         return [
             'title' => fake()->title(),
-            'list_id' => TaskList::factory(), 
-            'user_id' => User::factory(),
+            'user_id' => $user_id,
+            'list_id' => $list_id, 
         ];
     }
 }
