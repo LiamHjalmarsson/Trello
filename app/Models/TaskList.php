@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class TaskList extends Model
 {
+    protected $fillable = ["title", "user_id", "boarder_id"];
+
     /** @use HasFactory<\Database\Factories\TaskListFactory> */
     use HasFactory;
 

@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Board extends Model
 {
+    protected $fillable = ["title", "user_id"];
+    
     /** @use HasFactory<\Database\Factories\BoardFactory> */
     use HasFactory;
 

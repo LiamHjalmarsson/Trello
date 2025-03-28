@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Task extends Model
 {
+    protected $fillable = ["title", "user_id", "list_id"];
+
     /** @use HasFactory<\Database\Factories\TaskFactory> */
     use HasFactory;
 
