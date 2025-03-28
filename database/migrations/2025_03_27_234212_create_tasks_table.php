@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+            $table->string('title');
+
+            $table->foreignId('list_id')->constrained('task_lists');
+            $table->foreignId('user_id')->constrained('users');
+
         });
     }
 
