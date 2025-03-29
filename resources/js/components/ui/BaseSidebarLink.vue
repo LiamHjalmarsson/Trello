@@ -20,7 +20,7 @@ defineProps({
             <slot />
 
             <span
-                class="ml-4 transition-all duration-75 absolute left-12 whitespace-nowrap"
+                class="ml-4 transition-all duration-75 delay-75 absolute left-12 whitespace-nowrap text-sm"
                 :class="
                     isSidebarOpen
                         ? 'opacity-100 translate-x-0'

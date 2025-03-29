@@ -21,49 +21,51 @@ const toggleSidebar = () => {
 <template>
     <aside
         class="bg-slate-800 text-white h-full pt-16 flex flex-col transition-all duration-300"
-        :class="isSidebarOpen ? ' w-56' : ' w-24'"
+        :class="isSidebarOpen ? 'w-56' : ' w-24'"
     >
-        <nav class="flex flex-col space-y-2 px-3 mt-10">
-            <button
-                @click="toggleSidebar"
-                class="flex gap-2 items-center hover:bg-slate-500 transition duration-150 rounded-md w-fit px-4 py-2"
-            >
-                <PhArrowLineLeft
-                    :size="32"
-                    :class="[
-                        isSidebarOpen ? '' : 'rotate-180',
-                        'transition duration-150',
-                    ]"
-                />
-            </button>
+        <nav class="flex flex-col space-y-2 px-4 mt-10">
+            <div class="px-2">
+                <button
+                    @click="toggleSidebar"
+                    class="flex gap-2 items-center hover:bg-slate-500 transition duration-150 rounded-md w-fit px-2 py-1"
+                >
+                    <PhArrowLineLeft
+                        :size="24"
+                        :class="[
+                            isSidebarOpen ? '' : 'rotate-180',
+                            'transition duration-150',
+                        ]"
+                    />
+                </button>
+            </div>
 
             <ul class="mt-10 space-y-10">
                 <BaseSidebarLink label="Boards" :isSidebarOpen="isSidebarOpen">
-                    <PhCards :size="32" />
+                    <PhCards :size="24" />
                 </BaseSidebarLink>
                 <BaseSidebarLink
                     label="Overview"
                     :isSidebarOpen="isSidebarOpen"
                 >
-                    <PhCirclesFour :size="32" />
+                    <PhCirclesFour :size="24" />
                 </BaseSidebarLink>
                 <BaseSidebarLink label="Users" :isSidebarOpen="isSidebarOpen">
-                    <PhUsers :size="32" />
+                    <PhUsers :size="24" />
                 </BaseSidebarLink>
                 <BaseSidebarLink
                     label="Calender"
                     :isSidebarOpen="isSidebarOpen"
                 >
-                    <PhCalendar :size="32" />
+                    <PhCalendar :size="24" />
                 </BaseSidebarLink>
                 <BaseSidebarLink label="Liked" :isSidebarOpen="isSidebarOpen">
-                    <PhHeart :size="32" />
+                    <PhHeart :size="24" />
                 </BaseSidebarLink>
                 <BaseSidebarLink
                     label="Settings"
                     :isSidebarOpen="isSidebarOpen"
                 >
-                    <PhGearSix :size="32" />
+                    <PhGearSix :size="24" />
                 </BaseSidebarLink>
             </ul>
         </nav>
