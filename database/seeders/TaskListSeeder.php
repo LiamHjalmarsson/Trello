@@ -13,6 +13,6 @@ class TaskListSeeder extends Seeder
      */
     public function run(): void
     {
-        TaskList::factory()->count(5)->create();
+        TaskList::factory()->count(3)->create();
     }
 }
