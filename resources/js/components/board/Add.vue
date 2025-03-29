@@ -7,7 +7,9 @@ defineProps({
 </script>
 
 <template>
-    <button class="flex-1 px-4 py-2 text-slate-700 space-x-4" :class="[]">
+    <button
+        class="flex-1 flex items-center gap-2 w-full bg-transparent rounded px-4 py-2 space-x-4 hover:bg-gray-200 cursor-pointer text-gray-600 text-left text-sm font-medium"
+    >
         <slot />
     </button>
 </template>

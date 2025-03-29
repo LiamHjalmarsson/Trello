@@ -1,12 +1,17 @@
 <script setup>
+import { PhPlus } from "@phosphor-icons/vue";
+
 import Task from "@/components/board/Task.vue";
+import Add from "@/components/board/Add.vue";
 </script>
 
 <template>
-    <div class="flex flex-1 items-start overflow-x-auto">
-        <div class="bg-gray-100 px-2 pb-2 w-full space-y-2">
-            <Task>s</Task>
-            <Task>x</Task>
+    <div class="flex overflow-x-auto">
+        <div class="w-full space-y-2">
+            <Task></Task>
+            <Task></Task>
+
+            <Add> <PhPlus :size="16" /> Add new card </Add>
         </div>
     </div>
 </template>

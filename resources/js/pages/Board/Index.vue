@@ -9,7 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="flex gap-10">
+    <div class="flex gap-4 overflow-x-auto">
         <Board v-for="board in boards" :key="board.id" :board="board" />
     </div>
 </template>
