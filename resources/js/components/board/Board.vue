@@ -6,7 +6,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="flex flex-1 flex-col max-w-64 bg-gray-100 p-2">
+    <div class="flex flex-1 flex-col max-w-64 bg-gray-100 p-2 h-fit">
         <div class="px-4 py-2 flex justify-between items-center">
             <h2 class="font-bold text-lg">
                 {{ board.title }}

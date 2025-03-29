@@ -1,5 +1,5 @@
 <script setup>
-import Board from "@/components/board/Board.vue";
+import BoardList from "@/components/board/BoardList.vue";
 
 const props = defineProps({
     boards: {
@@ -9,7 +9,9 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="flex gap-4 overflow-x-auto">
-        <Board v-for="board in boards" :key="board.id" :board="board" />
-    </div>
+    <nav class="bg-slate-800/50 px-5 py-4 text-white fixed w-full">
+        <div class="text-xl font-bold">title</div>
+    </nav>
+
+    <BoardList :boards="boards" />
 </template>

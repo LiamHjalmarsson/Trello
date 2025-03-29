@@ -10,7 +10,7 @@ import TheSidebar from "@/components/layout/TheSidebar.vue";
         <div class="flex flex-1">
             <TheSidebar />
 
-            <main class="flex-1 overflow-auto pt-28 px-12">
+            <main class="flex-1 overflow-auto pt-16">
                 <slot />
             </main>
         </div>
