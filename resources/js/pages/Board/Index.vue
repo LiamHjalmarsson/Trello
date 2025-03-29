@@ -1,5 +1,5 @@
 <script setup>
-import Board from "@/components/trello/Board.vue";
+import Board from "@/components/board/Board.vue";
 
 const props = defineProps({
     boards: {
