@@ -5,7 +5,7 @@ const emit = defineEmits(['toggle-sidebar']);
 </script>
 
 <template>
-  <header class="bg-sky-600 text-white py-4 px-6 fixed top-0 left-0 w-full h-16 z-10">
+  <header class="bg-slate-900 text-white py-4 px-6 fixed top-0 left-0 w-full h-16 z-10">
     <nav class="flex justify-between items-center">
         <div class="flex items-center">
             <p class="text-xl font-bold">Trello Clone</p>
