@@ -20,7 +20,7 @@ const toggleSidebar = () => {
 
 <template>
     <aside
-        class="bg-slate-800 text-white h-full fixed left-0 top-16 bottom-0 flex flex-col transition-all duration-300"
+        class="bg-slate-800 text-white h-full pt-16 flex flex-col transition-all duration-300"
         :class="isSidebarOpen ? 'w-64' : ' w-24'"
     >
         <nav class="flex flex-col space-y-2 px-3 mt-10">
