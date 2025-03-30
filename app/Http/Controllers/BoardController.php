@@ -14,4 +14,13 @@ class BoardController extends Controller
             'boards' => Board::with('lists.tasks')->get()
         ]);
     }
+
+    public function show($id)
+    {
+        $board = Board::with('lists.tasks')->findOrFail($id);
+    
+        return Inertia::render('Board/Show', [
+            'board' => $board
+        ]);
+    }
 }
