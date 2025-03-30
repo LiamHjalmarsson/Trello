@@ -2,16 +2,18 @@
 import Board from "@/components/board/Board.vue";
 import Add from "@/components/board/Add.vue";
 defineProps({
-    boards: Array,
+    lists: Array,
 });
 </script>
 
 <template>
-    <div class="flex gap-4 pt-24 px-10 bg-amber-500 h-full">
-        <Board v-for="board in boards" :key="board.id" :board="board" />
+    <section
+        class="flex gap-4 pt-24 px-10 bg-amber-500 h-full w-full overflow-auto"
+    >
+        <Board v-for="list in lists" :key="list.id" :list="list" />
 
-        <div>
+        <div class="min-w-96">
             <Add :isCard="false" />
         </div>
-    </div>
+    </section>
 </template>
