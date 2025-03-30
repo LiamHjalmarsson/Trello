@@ -17,7 +17,7 @@ console.log(props.board);
     </nav>
 
     <section
-        class="pt-24 px-10 bg-amber-500 h-full w-full overflow-auto flex gap-10"
+        class="pt-24 px-10 bg-amber-500 h-full w-full overflow-auto flex gap-5"
     >
         <TaskList v-for="list in board.lists" :key="list.id" :list="list" />
 

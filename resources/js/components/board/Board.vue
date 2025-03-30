@@ -1,20 +1,24 @@
 <script setup>
+import { Link } from "@inertiajs/vue3";
 import { PhDotsThree } from "@phosphor-icons/vue";
-import TaskList from "@/components/board/TaskList.vue";
 defineProps({
-    list: Object,
+    board: Object,
 });
 </script>
 
 <template>
-    <div class="flex min-w-64 flex-col bg-gray-100 p-2 h-fit">
-        <div class="px-4 py-2 flex justify-between items-center">
-            <h2 class="font-bold text-lg">
-                {{ list.title }}
-            </h2>
-            <PhDotsThree :size="20" />
+    <Link
+        :href="`/boards/${board.id}`"
+        class="h-28 bg-white rounded-lg shadow flex justify-center items-center relative"
+    >
+        <div
+            @click.prevent="console.log('log')"
+            class="absolute top-0 right-0 pr-4 pt-1"
+        >
+            <PhDotsThree :size="32" />
         </div>
-
-        <TaskList :tasks="list.tasks" />
-    </div>
+        <h2 class="font-bold text-lg">
+            {{ board.title }}
+        </h2>
+    </Link>
 </template>
