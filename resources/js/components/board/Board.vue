@@ -1,7 +1,8 @@
 <script setup>
+import { PhDotsThree } from "@phosphor-icons/vue";
 import TaskList from "@/components/board/TaskList.vue";
 defineProps({
-    board: Array,
+    board: Object,
 });
 </script>
 
@@ -11,7 +12,7 @@ defineProps({
             <h2 class="font-bold text-lg">
                 {{ board.title }}
             </h2>
-            <PhDotsThree :size="32" />
+            <PhDotsThree :size="20" />
         </div>
 
         <TaskList />

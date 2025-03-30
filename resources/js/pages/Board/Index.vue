@@ -6,6 +6,8 @@ const props = defineProps({
         type: Array,
     },
 });
+
+console.log(props.boards);
 </script>
 
 <template>

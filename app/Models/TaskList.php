@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class TaskList extends Model
 {
-    protected $fillable = ["title", "user_id", "boarder_id"];
+    protected $fillable = ["title", "user_id", "board_id"];
 
     /** @use HasFactory<\Database\Factories\TaskListFactory> */
     use HasFactory;
@@ -19,7 +19,7 @@ class TaskList extends Model
     }
 
     public function tasks(): HasMany {
-        return $this->hasMany(Task::class);
+        return $this->hasMany(Task::class, 'list_id');
     }
 
     public function user(): BelongsTo {

@@ -15,7 +15,7 @@ class Board extends Model
     use HasFactory;
 
     public function lists(): HasMany {
-        return $this->hasMany(Board::class);
+        return $this->hasMany(TaskList::class);
     }
 
     public function user(): BelongsTo {

@@ -13,8 +13,8 @@ class Task extends Model
     /** @use HasFactory<\Database\Factories\TaskFactory> */
     use HasFactory;
 
-    public function list(): BelongsTo {
-        return $this->belongsTo(TaskList::class);
+    public function taskList(): BelongsTo {
+        return $this->belongsTo(TaskList::class, 'list_id');
     }
     
     public function user(): BelongsTo {
