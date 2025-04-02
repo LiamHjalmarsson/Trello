@@ -6,6 +6,10 @@ defineProps({
         type: String,
         required: true,
     },
+    to: {
+        type: [String, Function],
+        default: "/",
+    },
     isSidebarOpen: Boolean,
 });
 </script>
@@ -13,7 +17,7 @@ defineProps({
 <template>
     <li>
         <Link
-            href="/"
+            :href="to"
             class="flex items-center justify-start py-2 px-4 hover:bg-slate-500 transition-all duration-150 rounded-md relative"
             :class="isSidebarOpen ? '' : 'w-fit'"
         >

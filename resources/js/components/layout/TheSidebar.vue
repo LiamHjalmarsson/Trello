@@ -40,7 +40,11 @@ const toggleSidebar = () => {
             </div>
 
             <ul class="mt-10 space-y-10">
-                <BaseSidebarLink label="Boards" :isSidebarOpen="isSidebarOpen">
+                <BaseSidebarLink
+                    label="Boards"
+                    :isSidebarOpen="isSidebarOpen"
+                    to="/boards"
+                >
                     <PhCards :size="24" />
                 </BaseSidebarLink>
                 <BaseSidebarLink

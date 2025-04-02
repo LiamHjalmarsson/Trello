@@ -1,14 +1,12 @@
 <script setup>
-import TaskList from "@/components/board/TaskList.vue";
-import Add from "@/components/board/Add.vue";
+import TaskList from "@/components/tasks/TaskList.vue";
+import AddButton from "@/components/add/AddButton.vue";
 
 const props = defineProps({
     board: {
         type: Object,
     },
 });
-
-console.log(props.board);
 </script>
 
 <template>
@@ -20,7 +18,6 @@ console.log(props.board);
         class="pt-24 px-10 bg-amber-500 h-full w-full overflow-auto flex gap-5"
     >
         <TaskList v-for="list in board.lists" :key="list.id" :list="list" />
-
-        <Add />
+        <AddButton> Add new list </AddButton>
     </section>
 </template>
